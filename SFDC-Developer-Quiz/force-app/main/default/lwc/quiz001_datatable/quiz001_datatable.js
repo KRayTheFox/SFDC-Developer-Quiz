@@ -13,31 +13,15 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
  * 2. In the event of a failure, catch and show error using toast message.
  * */
 
-import getRecords from '@salesforce/apex/Quiz001_Controller.getAccounts';
-
 export default class Quiz001_datatable extends LightningElement {
     @track data = [];
-    columns = [
-        {label: 'Name', fieldName: 'Name', type: 'text'}
-    ];
-
-    connectedCallback(){
-        this.getData();
-    }
+    columns = [];
 
     getData(){
         try{
-            getRecords()
-                .then((results) => {
-                    this.data = [...results];
-                });
+
         }catch(error){
-            console.error(JSON.stringify(error));
-            this.dispatchEvent(new ShowToastEvent({
-                title: 'Error',
-                variant: error,
-                message: error.body.message
-            }));
+            
         }
     }
 }

@@ -13,10 +13,9 @@
  * */
 public class Quiz001_Controller {
 
-    @AuraEnabled(cacheable=false)
-    public static List<Account> getAccounts(){
+    public static void methodOne(){
         try {
-            return [SELECT Name FROM Account];
+            return;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

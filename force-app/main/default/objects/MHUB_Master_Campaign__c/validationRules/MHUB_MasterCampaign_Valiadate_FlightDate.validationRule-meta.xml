@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MHUB_MasterCampaign_Valiadate_FlightDate</fullName>
+    <active>true</active>
+    <description>MHUB - Validate that the Flight Start Date cannot occur after the Flight End Date.</description>
+    <errorConditionFormula>MHUB_Flight_Start_Date__c &gt;  MHUB_Flight_End_Date__c</errorConditionFormula>
+    <errorMessage>Flight Start Date must occur before the Flight End Date.</errorMessage>
+</ValidationRule>

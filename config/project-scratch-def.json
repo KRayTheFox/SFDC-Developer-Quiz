@@ -1,0 +1,34 @@
+{
+  "orgName": "Demo company",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi","StateAndCountryPicklist","PersonAccounts","PlatformCache","Sites"],
+  "settings": {
+    "apexSettings": {
+        "enableDisableParallelApexTesting": true
+    },
+    "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+    },
+    "chatterSettings": {
+        "enableChatter": true
+    },
+    "enhancedNotesSettings": {
+        "enableEnhancedNotes": true,
+        "enableTasksOnEnhancedNotes": true
+    },
+    "contentSettings": {
+        "enableContent": true,
+        "enableUploadFilesOnAttachments": true
+    },
+    "pathAssistantSettings": {
+        "pathAssistantEnabled": true
+    },
+    "accountSettings": {
+        "enableAccountHistoryTracking": true,
+        "enableAccountTeams": true
+    },
+    "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

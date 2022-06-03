@@ -6,9 +6,11 @@ The purpose of this quiz is to ensure developer has WORKING knowledge of Lightni
 
 ## WHAT YOU NEED
 1. Salesforce Org. 
-**NOTE: 
-  -This can be a Developer-Edition or scratch org, however, to ensure compatibility, please create/setup org the day of interview.
-  -To ensure caching doesn't cause issues, disable "Enable secure and persistent browser caching to improve performance" under *Setup > Session Settings*
+
+**NOTE:** 
+  - This can be a Developer-Edition or scratch org, however, to ensure compatibility, please create/setup org the day of interview.
+  - To ensure caching doesn't cause issues, disable "Enable secure and persistent browser caching to improve performance" under *Setup > Session Settings*
+  
 2. Visual Studio Code (VSCode)  w/ Salesforce Extensions for Visual Studio Code
 3. Salesforce Command-Line Interface (CLI)
 

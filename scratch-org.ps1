@@ -43,13 +43,12 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host ""
 
 # Populate test data
-#Write-Host -ForegroundColor green "Creating test data..."
-#& sfdx force:data:tree:import -u $orgName --plan data/Plan.json
-#& sfdx force:apex:execute -u $orgName -f ./scripts/apex/setupData.apex
-#if ($LASTEXITCODE -ne 0) {
-#	exit 1
-#}
-#Write-Host "" 
+Write-Host -ForegroundColor green "Creating test data..."
+& sfdx force:apex:execute -u $orgName -f ./scripts/apex/setupData.apex
+if ($LASTEXITCODE -ne 0) {
+	exit 1
+}
+Write-Host "" 
 
 if ($debugMode) {
 	# Set debug mode = true

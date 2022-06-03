@@ -6,14 +6,16 @@
  * @last modified by  : Kenneth Ray, Sr Salesforce Developer. 
 **/
 
-// Enforce sharing
+/** PLEASE LEAVE COMMENTED 
+ * 1. To ensure users have access to approved data, ensure sharing is enforced.
+ * 2. To use method within LWC, add correct annotation to expose method to LWC framework.
+ * 3. Create query to populate datatable. Conductor will provide object and list of fields.
+ * */
 public class Quiz001_Controller {
 
-    @AuraEnabled(cacheable=false)
-    public static string methodName(){
+    public static void methodOne(){
         try {
-            // Add query from Rhea's other tests here.
-            return '';
+            return;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

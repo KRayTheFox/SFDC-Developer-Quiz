@@ -1,18 +1,22 @@
-# Salesforce DX Project: Next Steps
+# SFDC-Developer-Quiz
+Contains boilerplate code to be completed by potential developers during hiring processes.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## PURPOSE
+The purpose of this quiz is to ensure developer has WORKING knowledge of Lightning-Web-Component (LWC) and Apex. 
 
-## How Do You Plan to Deploy Your Changes?
+## WHAT YOU NEED
+1. Salesforce Org. 
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+**NOTE:** 
+  - This can be a Developer-Edition or scratch org, however, to ensure compatibility, please create/setup org the day of interview.
+  - To ensure caching doesn't cause issues, disable "Enable secure and persistent browser caching to improve performance" under *Setup > Session Settings*
+  
+2. Visual Studio Code (VSCode)  w/ Salesforce Extensions for Visual Studio Code
+3. Salesforce Command-Line Interface (CLI)
 
-## Configure Your Salesforce DX Project
+## BACKGROUND
+To complete this quiz, you'll need to complete the missing areas of the Lightning-Web-Component (LWC) and its dependencies.  Everything you need to get 
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## HOW TO COMPLETE QUIZ
+1. Complete the javascript for the datatable location in quiz001_datatable lwc. 
+2. Successfully link lwc to apex controller method.

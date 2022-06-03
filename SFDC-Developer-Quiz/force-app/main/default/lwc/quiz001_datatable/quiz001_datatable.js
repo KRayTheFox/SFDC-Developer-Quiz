@@ -29,7 +29,6 @@ export default class Quiz001_datatable extends LightningElement {
         try{
             getRecords()
                 .then((results) => {
-                    console.log(`results => Accounts: ${JSON.stringify(results)}`);
                     this.data = [...results];
                 });
         }catch(error){

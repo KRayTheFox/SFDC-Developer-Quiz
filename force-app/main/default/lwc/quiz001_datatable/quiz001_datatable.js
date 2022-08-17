@@ -5,8 +5,6 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
  * As part of our team, you'll be responsible for managing existing LWCs, and if applicable, create new ones.   
  * For this quiz, you're tasking with completing a LWC. We've purposely excluded key features to test your working knowledge of LWC. 
  * 
- * OBJECTIVE:
- * Display data using a simple datatable.
  * 
  * REQUIREMENTS:
  * 1. Using imperative apex, retrieve data on page load.

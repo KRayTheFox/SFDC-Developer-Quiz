@@ -18,14 +18,14 @@ export default class Quiz001_datatable extends LightningElement {
     
     @track data = [];
     columns = [
-        { label: 'MHUB_Demographic__c', fieldName: 'MHUB_Demographic__c' },
+        { label: 'MHUB_Demographic__c', fieldName: 'Id' },
         { label: 'MHUB_Flight_End_Date__c', fieldName: 'MHUB_Flight_End_Date__c' },
         { label: 'MHUB_Flight_Start_Date__c', fieldName: 'MHUB_Flight_Start_Date__c' },
         { label: 'MHUB_Length__c', fieldName: 'MHUB_Length__c' },
         { label: 'MHUB_Season__c', fieldName: 'MHUB_Season__c' },
         { label: 'MHUB_Sport__c', fieldName: 'MHUB_Sport__c' },
         { label: 'MHUB_Sport_Sub_Category__c', fieldName: 'MHUB_Sport_Sub_Category__c' },
-        { label: 'MHUB_Status__c', fieldName: 'MHUB_Status__c' }
+        { label: 'MHUB_Status__c', fieldName: 'MHB_Status__c' }
     ];
 
     getMHUBMasterCampaignRecordsFromServer(){
@@ -37,9 +37,11 @@ export default class Quiz001_datatable extends LightningElement {
         })
         .catch((error) => {
             console.error(error);
-            this.showToast('Error', error.message, 'error', 'pester');
+            this.showToast('Errors', error.message, 'errors', 'pester');
         })
-        .finally(() => {});
+        .finally(() => {
+            this.showToast('Error', error.message, 'error', 'pester');
+        });
     }
 
     // Show Toast Event

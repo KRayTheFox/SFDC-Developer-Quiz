@@ -12,14 +12,45 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
  * */
 
 export default class Quiz001_datatable extends LightningElement {
+    connectedCallback(){
+        this.getMHUBMasterCampaignRecordsFromServer();
+    }
+    
     @track data = [];
-    columns = [];
+    columns = [
+        { label: 'MHUB_Demographic__c', fieldName: 'MHUB_Demographic__c' },
+        { label: 'MHUB_Flight_End_Date__c', fieldName: 'MHUB_Flight_End_Date__c' },
+        { label: 'MHUB_Flight_Start_Date__c', fieldName: 'MHUB_Flight_Start_Date__c' },
+        { label: 'MHUB_Length__c', fieldName: 'MHUB_Length__c' },
+        { label: 'MHUB_Season__c', fieldName: 'MHUB_Season__c' },
+        { label: 'MHUB_Sport__c', fieldName: 'MHUB_Sport__c' },
+        { label: 'MHUB_Sport_Sub_Category__c', fieldName: 'MHUB_Sport_Sub_Category__c' },
+        { label: 'MHUB_Status__c', fieldName: 'MHUB_Status__c' }
+    ];
 
-    getData(){
-        try{
+    getMHUBMasterCampaignRecordsFromServer(){
+        return getMHUBMasterCampaignRecords({
+        })
+        .then((result) => {
+            this.data = result;
+            console.log(JSON.stringify(this.data));
+        })
+        .catch((error) => {
+            console.error(error);
+            this.showToast('Error', error.message, 'error', 'pester');
+        })
+        .finally(() => {});
+    }
 
-        }catch(error){
-            
-        }
+    // Show Toast Event
+    showToast(title, message, variant, mode) {
+        this.dispatchEvent(
+            new ShowToastEvent({
+                title: title,
+                message: message,
+                variant: variant,
+                mode: mode
+            })
+        );
     }
 }

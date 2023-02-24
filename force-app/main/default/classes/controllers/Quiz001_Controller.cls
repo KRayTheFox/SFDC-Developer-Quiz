@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Kenneth Ray Sr Salesforce Developer. 
  * @group             : 
- * @last modified on  : 06-02-2022
+ * @last modified on  : 02-24-2023
  * @last modified by  : Kenneth Ray, Sr Salesforce Developer. 
 **/
 
@@ -13,9 +13,12 @@
  * */
 public class Quiz001_Controller {
 
-    public static void methodOne(){
+    @AuraEnabled
+    public static List<MHUB_Master_Campaign__c> getMHUBMasterCampaignRecords(){
+        List<MHUB_Master_Campaign__c> alRecords = new List<MHUB_Master_Campaign__c>();
         try {
-            return;
+            List<MHUB_Master_Campaign__c> allRecords = [SELECT MHUB_Demographic__c, MHUB_Flight_End_Date__c, MHUB_Flight_Start_Date__c, MHUB_Length__c, MHUB_Master_Campaign__c, MHUB_Season__c, MHUB_Sport__c, MHUB_Sport_Sub_Category__c, MHUB_Status__c FROM MHUB_Master_Campaign__c WHERE Id = '' LIMIT 50];
+            return alRecords;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

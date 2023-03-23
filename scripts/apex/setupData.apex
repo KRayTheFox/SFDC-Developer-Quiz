@@ -7,31 +7,75 @@ Id secondaryRecordTypeId = [SELECT Id FROM RecordType WHERE SObjectType ='MHUB_M
 Integer count = 1;
 List<MHUB_Master_Campaign__c> campaignRecords = new List<MHUB_Master_Campaign__c>();
 
-while (count < 6) {
-
-    MHUB_Master_Campaign__c master = new MHUB_Master_Campaign__c(
-        Name = 'Master Campaign ' + count,
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX PBA',
         MHUB_Season__c = '2022',
-        MHUB_Sport__c = 'MLB',
-        MHUB_Sport_Sub_Category__c = 'MLB',
         MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2019/02/fox-pba.jpg',
         RecordTypeId = masterRecordTypeId
-        );
-    
-    insert master;
+));
 
-     MHUB_Master_Campaign__c secondary = new MHUB_Master_Campaign__c(
-        Name = 'Secondary Campaign ' + count,
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX Motorsports Racing',
         MHUB_Season__c = '2022',
-        MHUB_Sport__c = 'MLB',
-        MHUB_Sport_Sub_Category__c = 'MLB',
         MHUB_Status__c = 'Not Started',
-        RecordTypeId = secondaryRecordTypeId,
-        MHUB_Master_Campaign__c = master.Id
-        );
-    campaignRecords.add(secondary);
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2016/12/FOX-SPORTS-RACING_LOGO.jpg',
+        RecordTypeId = masterRecordTypeId
+));
 
-    count++;
-}
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX PBC',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2016/12/PBC-on-FOX_Header-Image_1040x585.jpg',
+        RecordTypeId = masterRecordTypeId
+));
+
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX College Football',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2018/01/FOX-College-Football.png',
+        RecordTypeId = masterRecordTypeId
+));
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX College Hoops',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2018/01/FOX-College-Hoops.png',
+        RecordTypeId = masterRecordTypeId
+));
+
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX NASCAR',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2016/12/FOX-NASCAR-Press-Pass.jpg',
+        RecordTypeId = masterRecordTypeId
+));
+
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX WWE',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2019/09/Slide1.png',
+        RecordTypeId = masterRecordTypeId
+));
+
+campaignRecords.add(
+    new MHUB_Master_Campaign__c(
+        Name = 'FOX Soccer',
+        MHUB_Season__c = '2022',
+        MHUB_Status__c = 'Not Started',
+        MHUB_Image_Url__c = 'https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2022/06/FOX_SOCCER.png',
+        RecordTypeId = masterRecordTypeId
+));
 
 insert campaignRecords;

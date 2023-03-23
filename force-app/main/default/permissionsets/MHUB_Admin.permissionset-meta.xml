@@ -51,6 +51,11 @@
         <field>MHUB_Master_Campaign__c.MHUB_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MHUB_Master_Campaign__c.MHUB_Image_Url__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>MHUB Admin</label>
     <objectPermissions>
